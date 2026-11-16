@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | Nailed by Ellie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpeg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Nailed by Ellie Logo" class="real-logo" onerror="this.src='https://placehold.co/45x45/d6336c/white?text=E'">
+            <h1>Nailed by Ellie</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FULL PAGE BACKGROUND -->
+    <section class="page-bg bg-contact">
+        <!-- TRANSPARENT OVERLAY -->
+        <div class="content-overlay">
+            
+            <div class="inner-header">
+                <h2>Book an Appointment</h2>
+                <p>We can't wait to pamper you.</p>
+            </div>
+            
+            <!-- THE FORM -->
+            <form class="booking-form" id="bookingForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+254...">
+
+                <label for="service">Service Wanted</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="manicure">Manicure - KSh 800</option>
+                    <option value="pedicure">Pedicure - KSh 1,000</option>
+                    <option value="gel">Gel Polish - KSh 800</option>
+                    <option value="tips">Tips - KSh 800</option>
+                    <option value="builder">Builder Gel - KSh 1,500</option>
+                    <option value="gumgel">Gumgel (Polygel) - KSh 2,000</option>
+                    <option value="acrylics">Acrylics - KSh 2,000</option>
+                </select>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 0.5rem;">Book Appointment</button>
+            </form>
+
+            <!-- THE BEAUTIFUL SUCCESS MESSAGE (Hidden until they click Book) -->
+            <div id="successMessage" style="display: none; padding: 3rem 1.5rem; text-align: center; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <i class="fas fa-check-circle" style="font-size: 3.5rem; color: #d6336c; margin-bottom: 1rem;"></i>
+                <h3 style="font-size: 2rem; color: #333; margin-bottom: 0.5rem;">Thank you for choosing us! 🩷</h3>
+                <p style="color: #666; font-size: 1.1rem;">Your appointment request has been received.<br>Ellie will contact you shortly to confirm.</p>
+                <a href="index.html" class="btn" style="margin-top: 1.5rem; text-decoration: none;">Return to Home</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nailed by Ellie. All rights reserved.</p>
+        <p class="footer-insta">
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i> Follow us @NailedByEllie
+            </a>
+        </p>
+    </footer>
+    
+    <!-- Only one script tag -->
+    <script src="script.js"></script>
+</body>
+</html>
